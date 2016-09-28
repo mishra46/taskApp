@@ -57,7 +57,6 @@ class ViewController: UIViewController, UITableViewDelegate, UISearchBarDelegate
         
             taskArray = try! Realm().objects(Task).filter("category BEGINSWITH[c] %@", searchBar.text!)
 
-        //テーブルを再読み込みする。
         tableView.reloadData()
     }
     
